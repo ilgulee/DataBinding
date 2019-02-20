@@ -1,7 +1,10 @@
 package ilgulee.com.databinding
 
+import android.widget.ImageView
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
+import androidx.databinding.BindingAdapter
+import com.bumptech.glide.Glide
 
 class Contact(_name: String, _email: String) : BaseObservable() {
     @get:Bindable
@@ -16,4 +19,15 @@ class Contact(_name: String, _email: String) : BaseObservable() {
             field = value
             notifyPropertyChanged(BR.email)
         }
+
+    // Binding Image
+    companion object {
+        @JvmStatic
+        @BindingAdapter("profileImage")
+        fun loadImage(view: ImageView, imgUrl: String) {
+            Glide.with(view.context)
+                .load(imgUrl)
+                .into(view)
+        }
+    }
 }

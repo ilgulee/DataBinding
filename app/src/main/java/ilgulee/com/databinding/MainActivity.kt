@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 //            Toast.makeText(this, "Clicked name: " + binding.textName.text, Toast.LENGTH_SHORT).show()
 //        }
         binding.handler = EventHandler(this)
-
+        binding.imgUrl = "https://i.imgur.com/dgrWdgo.jpg"
     }
 
 }
