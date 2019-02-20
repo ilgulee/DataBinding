@@ -13,5 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         //build project again
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.textName.text = "Ilgu Lee"
+        binding.textEmail.text = "iglee2000ca@gmail.com"
     }
 }
