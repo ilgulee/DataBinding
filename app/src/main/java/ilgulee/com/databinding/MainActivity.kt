@@ -16,5 +16,12 @@ class MainActivity : AppCompatActivity() {
 //        binding.textName.text = "Ilgu Lee"
 //        binding.textEmail.text = "iglee2000@gmail.com"
         binding.contact = Contact("Ilgu Lee", "iglee2000@gmail.com")
+
+//        button_click.setOnClickListener {
+//            Toast.makeText(this, "Clicked name: " + binding.textName.text, Toast.LENGTH_SHORT).show()
+//        }
+        binding.handler = EventHandler(this)
+
     }
+
 }
