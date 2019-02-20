@@ -28,12 +28,20 @@
                 android:text='@{contact.email, default="email@gmail.com"}'
                 android:textSize="20sp"/>
 
+        <EditText
+                android:id="@+id/edit_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@={contact.name, default=Name}"/>
+
         <Button
                 android:id="@+id/button_click"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="click_me"
-                android:onClick="@{()->handler.onButtonClick() }"/>
+                android:onClick="@{()->handler.onButtonClick(contact.name) }"/>
 
     </LinearLayout>
 
